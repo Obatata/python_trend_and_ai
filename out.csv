@@ -1,0 +1,12 @@
+
+select
+    user_id
+    , count(*) as num_transactions
+    , sum(amount) as total_amount
+from
+    transactions
+where
+    user_id = 1234
+    and transaction_date = 2019-03-02
+group by
+    user_id
